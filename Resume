@@ -1,0 +1,84 @@
+ <html>
+      <head>
+           <style>
+               #ThisisBlue{
+                   color: blue;
+                   background: grey;
+                   }
+           </style>
+      </head>
+        
+            <body>
+                <center>
+                    <p id= "ThisisBlue"> RESUME </p>
+                </center>
+                
+            <table>
+                    <tr>
+                        <td colspan="2"> PERSONAL INFORMATION </td>
+                        
+                        <td rowspan="3"><img src="/IMAGE 010605.jpg " width="100px" height="100px"/> </td>
+                    </tr>
+               
+                    <tr>
+                        <td> NAME:</td>
+                        <td> Magdaline S. Infante </td>
+                    </tr>
+                    <tr>
+                        <td> CONTACT:</td>
+                        <td> 09515797308 </td>
+                    </tr>
+                    <tr>
+                        <td> ADDRESS:</td>
+                        <td> Facoma Compound Centro Occ. Polangui, Albay </td>
+                    </tr>
+                    <tr>
+                        <td> BIRTHDAY:</td>
+                        <td> January 6, 2005 </td>
+                    </tr>
+                    <tr>
+                        <td> EMAIL:</td>
+                        <td> magdalineinfante@gmail.com </td>
+                    </tr>
+            </table>
+               <br>
+           
+
+            <table>
+                    <tr>
+                        <td colspan="2"> EDUCATIONAL BACKGROUND </td>
+                    </tr>
+                    <tr>
+                        <td> COLLEGE:</td>
+                        <td> Bicol University Polangui </td>
+                    </tr>
+                    <tr>
+                        <td> HIGH SCHOOL:</td>
+                        <td> Polangui General Comprehensive High School </td>
+                    </tr>
+                    <tr>
+                        <td> Elementary:</td>
+                        <td> Polangui South Central School </td>
+                    </tr>  
+            </table>
+                <br>
+
+            <table>
+                    <tr>
+                        <td colspan="2"> SKILLS </td>
+                    </tr>
+                    <tr>
+                        <td> Writing skills </td>
+                    </tr>
+                    <tr>
+                        <td> Communication Skills </td>>
+                    </tr>
+                    <tr>
+                        <td> Creativity </td>
+                    </tr>  
+             </table>
+                <br>
+            
+            </body>
+
+    </html>
