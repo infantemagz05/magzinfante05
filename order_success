@@ -1,0 +1,95 @@
+<?php
+// Database connection parameters
+$servername = "localhost";  // Change to your database server
+$username = "root";         // Your database username
+$password = "";             // Your database password
+$dbname = "project";        // The name of your database
+
+// Create a connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Order details from query parameters
+$order_id = $_GET['order_id'] ?? 'Unknown';
+$payment_method = $_GET['payment_method'] ?? 'Unknown';
+
+// Close the connection when you're done
+mysqli_close($conn);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #EDD77E;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: black;
+            position: relative; /* This ensures the button is positioned relative to the body */
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .container h1 {
+            color: #4CAF50;
+        }
+        .container p {
+            font-size: 18px;
+            margin: 20px;
+        }
+        /* Button Styling */
+        .continue-shopping-btn {
+            background-color: #CB8944;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .continue-shopping-btn:hover {
+            background-color: #CB8944;
+        }
+
+        /* Logout Button Styling */
+        .logout-btn {
+            background-color: brown;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .logout-btn:hover {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Placed Successfully!</h1>
+        <p>Your order ID is <strong><?php echo htmlspecialchars($order_id); ?></strong>.</p>
+        <p>Payment Method: <strong><?php echo htmlspecialchars($payment_method); ?></strong>.</p>
+        
+        <!-- Continue Shopping Button -->
+        <p><a href="items.php" class="continue-shopping-btn">Continue Shopping</a></p>
+    </div>
+
+    <!-- Logout Button -->
+    <a href="homepage.php" class="logout-btn">Logout</a>
+</body>
+</html>
